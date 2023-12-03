@@ -29,3 +29,8 @@ class Register(View):
             'form': form
         }
         return render(request, self.template_name, context)
+
+
+class LoginAjaxView(View):
+    def post(self, request):
+        return {'status': True}
