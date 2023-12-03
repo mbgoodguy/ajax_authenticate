@@ -12,12 +12,22 @@ class AjaxAuthenticationForm(forms.Form):
     email = forms.EmailField(
         label=gettext_lazy("Email"),
         max_length=254,
-        widget=forms.EmailInput(attrs={'autocomplete': 'email'})
+        widget=forms.EmailInput(
+            attrs={
+                'autocomplete': 'email',
+                'class': 'form-control'
+            }
+        )
     )
     password = forms.CharField(
         label=gettext_lazy("Password"),
         strip=False,
-        widget=forms.PasswordInput(attrs={'autocomplete': 'current-password'})
+        widget=forms.PasswordInput(
+            attrs={
+                'autocomplete': 'current-password',
+                'class': 'form-control'
+            }
+        )
     )
 
 
