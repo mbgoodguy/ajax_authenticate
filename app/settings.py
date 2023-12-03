@@ -29,16 +29,18 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_URL = 'home'
+LOGIN_URL = 'home'
 
 INSTALLED_APPS = [
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'users'
 ]
 
 MIDDLEWARE = [
